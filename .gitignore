@@ -38,4 +38,4 @@ pnpm-debug.log*
 
 # Temporary files
 *.tmp
-*.temp
+*.temp.claude.json

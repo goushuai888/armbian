@@ -31,7 +31,8 @@ export default defineConfig({
               { text: '全面介绍', link: '/claude-code-intro' },
               { text: '最佳实践指南', link: '/claude-code-best-practices' },
               { text: '与其他工具对比', link: '/claude-code-comparison' },
-              { text: '高级使用技巧', link: '/claude-code-advanced-tips' }
+              { text: '高级使用技巧', link: '/claude-code-advanced-tips' },
+              { text: 'MCP 服务配置', link: '/claude-code-mcp-config' }
             ]
           }
         ],
@@ -79,7 +80,8 @@ export default defineConfig({
               { text: 'Introduction', link: '/en/claude-code-intro' },
               { text: 'Best Practices', link: '/en/claude-code-best-practices' },
               { text: 'Tool Comparison', link: '/en/claude-code-comparison' },
-              { text: 'Advanced Tips', link: '/en/claude-code-advanced-tips' }
+              { text: 'Advanced Tips', link: '/en/claude-code-advanced-tips' },
+              { text: 'MCP Services Config', link: '/en/claude-code-mcp-config' }
             ]
           }
         ],
