@@ -2,6 +2,8 @@
 
 在现代 AI 辅助开发环境中，Model Context Protocol (MCP) 服务扮演着至关重要的角色。本文将深入解析一个完整的 Claude Code MCP 配置，帮助你打造强大的开发工作站。
 
+> 📖 **官方文档**: [Claude Code 完整指南](https://docs.anthropic.com/zh-CN/docs/claude-code/overview) | [MCP 服务文档](https://docs.anthropic.com/zh-CN/docs/claude-code/mcp)
+
 ## 什么是 MCP 服务？
 
 Model Context Protocol (MCP) 是一个开放标准，允许 AI 模型与外部工具和服务进行交互。通过 MCP，Claude Code 可以访问各种专业服务，从而大大扩展其功能边界。
