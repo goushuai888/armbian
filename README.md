@@ -2,7 +2,7 @@
 
 [![Deploy to Vercel](https://img.shields.io/badge/Deploy%20to-Vercel-black?logo=vercel)](https://vercel.com)
 [![VitePress](https://img.shields.io/badge/VitePress-1.6.4-646cff?logo=vite)](https://vitepress.dev)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](#-许可证)
 
 > 🚀 基于 VitePress 的 Claude Code AI 编程助手完整指南，提供中英双语支持和响应式设计
 
@@ -165,7 +165,7 @@ npm run docs:build
 
 ## 📄 许可证
 
-本项目采用 [MIT License](LICENSE) 许可证。
+本项目采用 MIT License 许可证。
 
 ## 📞 联系方式
 
