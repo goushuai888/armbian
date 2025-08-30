@@ -27,6 +27,7 @@ export default defineConfig({
           {
             text: 'Claude Code 系列文章',
             items: [
+              { text: '快速入门', link: '/claude-code-quickstart' },
               { text: '全面介绍', link: '/claude-code-intro' },
               { text: '最佳实践指南', link: '/claude-code-best-practices' },
               { text: '与其他工具对比', link: '/claude-code-comparison' },
@@ -74,6 +75,7 @@ export default defineConfig({
           {
             text: 'Claude Code Articles',
             items: [
+              { text: 'Quickstart', link: '/en/claude-code-quickstart' },
               { text: 'Introduction', link: '/en/claude-code-intro' },
               { text: 'Best Practices', link: '/en/claude-code-best-practices' },
               { text: 'Tool Comparison', link: '/en/claude-code-comparison' },
