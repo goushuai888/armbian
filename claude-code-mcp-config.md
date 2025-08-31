@@ -10,7 +10,7 @@ Model Context Protocol (MCP) 是一个开放标准，允许 AI 模型与外部�
 
 ## 配置文件概览
 
-本配置展示了一个完整的 Claude Code MCP 生态系统，包含 7 个核心服务。MCP 配置通常存储在全局配置文件中，各项目可以选择启用特定服务：
+本配置展示了一个完整的 Claude Code MCP 生态系统，包含 9 个核心服务。MCP 配置通常存储在全局配置文件中，各项目可以选择启用特定服务：
 
 ### 全局 MCP 配置结构
 ```json
@@ -22,7 +22,9 @@ Model Context Protocol (MCP) 是一个开放标准，允许 AI 模型与外部�
     "neo4j-memory": { /* 知识图谱存储 */ },
     "Figma": { /* 设计协作平台 */ },
     "github": { /* 代码托管服务 */ },
-    "vercel": { /* 部署平台服务 */ }
+    "vercel": { /* 部署平台服务 */ },
+    "douyin-mcp": { /* 抖音视频处理 */ },
+    "serena": { /* 语义代码分析 */ }
   }
 }
 ```
@@ -181,6 +183,56 @@ Model Context Protocol (MCP) 是一个开放标准，允许 AI 模型与外部�
 - 📊 **性能监控**：实时性能分析
 - 🔧 **环境管理**：预览和生产环境
 
+### 8. Douyin MCP - 抖音视频处理服务
+
+```json
+"douyin-mcp": {
+  "args": ["douyin-mcp-server"],
+  "command": "uvx",
+  "env": {
+    "DASHSCOPE_API_KEY": "sk-***"
+  }
+}
+```
+
+**核心功能**：
+- 🎬 **视频解析**：获取抖音视频的无水印下载链接
+- 🎙️ **语音识别**：从视频中提取文字内容
+- 📊 **视频信息**：获取视频元数据和统计信息
+- 🔍 **内容分析**：智能分析视频内容和关键信息
+
+**使用场景**：
+- 内容创作者工具开发
+- 视频内容分析和处理
+- 自动化视频管理系统
+- 多媒体内容整理
+
+### 9. Serena - 语义代码分析工具
+
+```json
+"serena": {
+  "command": "uvx",
+  "args": [
+    "--from",
+    "git+https://github.com/oraios/serena",
+    "serena",
+    "start-mcp-server"
+  ]
+}
+```
+
+**强大特性**：
+- 🧠 **语义理解**：深度理解代码结构和语义
+- 🔍 **符号检索**：精确查找函数、类、变量等代码符号
+- ✏️ **智能编辑**：基于语义的代码修改和重构
+- 📋 **多语言支持**：Python、TypeScript、JavaScript、PHP、Go、Rust、C/C++、Java、Ruby、Swift等
+
+**开发价值**：
+- 大型代码库的快速导航和理解
+- 精确的代码重构和维护
+- 跨文件的依赖分析和追踪
+- 智能代码生成和补全
+
 ## 配置最佳实践
 
 ### 安全性配置
@@ -271,10 +323,11 @@ claude mcp list
 ### 开发周期集成
 1. **需求分析**：使用 Context7 获取技术文档
 2. **设计实现**：通过 Figma 获取设计规范
-3. **代码开发**：利用 GitHub 进行版本控制
-4. **测试验证**：Browser Tools 进行质量检测
-5. **部署发布**：Vercel 实现自动化部署
-6. **知识积累**：Neo4j Memory 存储项目经验
+3. **代码开发**：利用 GitHub 进行版本控制，Serena 进行代码分析
+4. **内容处理**：Douyin MCP 处理视频内容（如需要）
+5. **测试验证**：Browser Tools 进行质量检测
+6. **部署发布**：Vercel 实现自动化部署
+7. **知识积累**：Neo4j Memory 存储项目经验
 
 ### 团队协作优势
 - **统一标准**：所有团队成员使用相同配置
@@ -324,7 +377,8 @@ claude mcp list
     "context7": { /* 文档服务配置 */ },
     "browser-tools": { /* 浏览器测试配置 */ },
     "vercel": { /* 部署服务配置 */ },
-    "neo4j-memory": { /* 知识图谱配置 */ }
+    "neo4j-memory": { /* 知识图谱配置 */ },
+    "serena": { /* 代码分析工具 */ }
   }
 }
 ```
@@ -349,6 +403,8 @@ claude mcp list
 - **数据库服务**：Supabase、PlanetScale、Neon
 - **云服务平台**：AWS MCP、Azure MCP、GCP MCP
 - **协作工具**：Linear、Notion、Slack MCP
+- **多媒体处理**：Video/Audio MCP、Image Processing MCP
+- **语义分析**：Code Intelligence MCP、文档理解工具
 
 ### 配置演进策略
 1. **渐进式添加**：根据项目需求逐步集成新服务
